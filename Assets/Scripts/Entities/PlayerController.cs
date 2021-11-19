@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 		// bullet
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			Instantiate(bulletPrefab, transform.position + Vector3.right * 3.5f, Quaternion.identity);
+			Instantiate(bulletPrefab, transform.position + Vector3.right * 6, Quaternion.identity);
 		}
 	}
 }

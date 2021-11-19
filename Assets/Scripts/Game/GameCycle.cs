@@ -25,7 +25,7 @@ public class GameCycle : MonoBehaviour {
 
 	void OnLevelFinished(EventArgs eventArgs)
 	{
-		ClearLevel ();
+		StartNewMatch();
 	}
 
 	void OnLevelFail(EventArgs eventArgs)
