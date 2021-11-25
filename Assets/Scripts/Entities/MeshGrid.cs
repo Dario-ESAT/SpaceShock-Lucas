@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MeshGrid : MonoBehaviour {
 
+	public float rotation;
+	public float length;
+
 	[Header("Element")]
 	public Mesh baseMesh;
 
@@ -69,6 +72,9 @@ public class MeshGrid : MonoBehaviour {
 			else
 				m_objectGrid [i] = null;
 		}
+
+		transform.RotateAround(transform.position, transform.forward, rotation);
+		transform.localScale = new Vector3(transform.localScale.x * length, transform.localScale.y, transform.localScale.z);
 
 	}
 
