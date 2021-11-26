@@ -10,6 +10,8 @@ public class PlayableArea : MonoBehaviour {
 	public Transform mainPlayer;
 	public bool edgesTeleport = false;
 
+  public Vector3 leftTopPos;
+  public Vector3 rightDownPos;
 	void OnTriggerExit(Collider other)
 	{
 		GameObject otherGameObject = other.gameObject;
@@ -26,8 +28,8 @@ public class PlayableArea : MonoBehaviour {
 		// calculate area size
 		float far = transform.position.z - cameraReference.transform.position.z;
 
-		Vector3 leftTopPos = cameraReference.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, far));
-		Vector3 rightDownPos = cameraReference.ScreenToWorldPoint(new Vector3((float)cameraReference.pixelWidth, (float)cameraReference.pixelHeight, far));
+		leftTopPos = cameraReference.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, far));
+		rightDownPos = cameraReference.ScreenToWorldPoint(new Vector3((float)cameraReference.pixelWidth, (float)cameraReference.pixelHeight, far));
 
 		Vector3 areaSize = rightDownPos - leftTopPos;
 
