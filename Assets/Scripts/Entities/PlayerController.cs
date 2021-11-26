@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour {
 		// movement
 
 		// horizontal
-		float offsetX = 0.0f;
-
-		if (Input.GetKey(KeyCode.LeftArrow))
-			offsetX -= movementDistance;
-		if (Input.GetKey(KeyCode.RightArrow))
-			offsetX += movementDistance;
-
-		offsetX *= Time.deltaTime;
+		//float offsetX = 0.0f;
+		//
+		//if (Input.GetKey(KeyCode.LeftArrow))
+		//	offsetX -= movementDistance;
+		//if (Input.GetKey(KeyCode.RightArrow))
+		//	offsetX += movementDistance;
+		//
+		//offsetX *= Time.deltaTime;
 
 		// vertical
 		float offsetY = 0.0f;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
 		offsetY *= Time.deltaTime;
 	
-		transform.localPosition += new Vector3 (offsetX, offsetY, 0.0f);
+		transform.localPosition += new Vector3 (0.0f, offsetY, 0.0f);
 
 		// bullet
 		if (Input.GetKeyDown(KeyCode.Space))

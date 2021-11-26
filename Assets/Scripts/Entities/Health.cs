@@ -12,7 +12,7 @@ public class Health : MonoBehaviour {
 	public delegate void OnHit(Health health, EventArgs eventArgs);
 	public delegate void OnDie(Health health, EventArgs eventArgs);
 
-	public void Hit(float damage)
+    public void Hit(float damage)
 	{
 		health -= damage;
 

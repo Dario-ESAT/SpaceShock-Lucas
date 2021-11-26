@@ -14,7 +14,6 @@ public class GameCycle : MonoBehaviour {
 	{
 		gameMatch.onFinishWaves += new GameMatch.OnFinishWaves(OnLevelFinished);
 		playerReaction.onPlayerDie += new PlayerReaction.OnPlayerDie (OnLevelFail);
-
 		StartNewMatch ();
 	}
 
