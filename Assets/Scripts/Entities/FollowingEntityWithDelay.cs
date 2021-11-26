@@ -10,14 +10,15 @@ public class FollowingEntityWithDelay : MonoBehaviour {
 
   List<float> delay_list;
   void Start() {
+    delay_list = new List<float>(follow_delay);
     for (int i = 0; i < follow_delay; i++) {
       delay_list.Add(following.transform.position.y);
     }
   }
 
   // Update is called once per frame
-  void FixedUpdate() {
-    for (int i = 0; i < follow_delay; i++) {
+  void Update() {
+    for (int i = 0; i < follow_delay - 1; i++) {
       delay_list[i] = delay_list[i + 1];
     }
     delay_list[follow_delay - 1] = following.transform.position.y;

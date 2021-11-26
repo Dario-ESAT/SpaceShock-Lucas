@@ -14,6 +14,7 @@ public class LowerHPMoreSpeed : EntityReaction{
       starting_velocity = movement_.velocity.x;
   }
   protected override void OnHit(Health health, EventArgs eventArgs) {
+    print(starting_velocity - starting_velocity * (c_health.health/starting_health) + " = " + starting_velocity + " - " + (starting_velocity * (c_health.health/starting_health)) + " = " +starting_velocity + " * " + c_health.health + " / " +  starting_health + " = " + (c_health.health/starting_health));
     movement_.velocity.x -= starting_velocity - starting_velocity * (c_health.health/starting_health);
   }
 

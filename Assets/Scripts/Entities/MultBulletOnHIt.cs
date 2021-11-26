@@ -9,7 +9,6 @@ public class MultBulletOnHIt : MonoBehaviour {
 
   void OnTriggerEnter(Collider other) {
     if(other.gameObject.CompareTag("Bullet")) {
-
       GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
       LinearMovement bullet_movement = bullet.GetComponent<LinearMovement>();
       Vector3 new_velocity =  new Vector3(bullet_movement.velocity.x, y_deviation, bullet_movement.velocity.z);
