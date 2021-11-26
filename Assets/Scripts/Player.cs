@@ -7,17 +7,15 @@ public class Player : MonoBehaviour
     public Health healthScr;
     public HealthSlider slider;
 
-    private void Start()
-    {
+    private void Start() {
         slider.SetMaxHealth(healthScr.health);
     }
 
     private void Update()
     {
         slider.SetHealth(healthScr.health);
-        if (healthScr.health <= 0)
-        {
-
+        if (healthScr.health <= 0) {
+          healthScr.health = 3;
         }
     }
 }

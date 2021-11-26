@@ -8,7 +8,13 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bulletPrefab; 
 	public float movementDistance = 10.0f;
 
-	// Update is called once per frame
+  public float fire_rate_ = 1;
+
+  float counter_;
+
+  private void Start() {
+    counter_ = 0;
+  }
 	void Update () {
 
 		// movement
@@ -36,9 +42,13 @@ public class PlayerController : MonoBehaviour {
 		transform.localPosition += new Vector3 (0.0f, offsetY, 0.0f);
 
 		// bullet
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Instantiate(bulletPrefab, transform.position + Vector3.right * 6, Quaternion.identity);
+		if (Input.GetKey(KeyCode.Space)) {
+      if (counter_ > fire_rate_) {
+			  Instantiate(bulletPrefab, transform.position + Vector3.right * 6, Quaternion.identity);  
+        counter_ = 0;
+      } else {
+        counter_ += Time.deltaTime;
+      }
 		}
 	}
 }
