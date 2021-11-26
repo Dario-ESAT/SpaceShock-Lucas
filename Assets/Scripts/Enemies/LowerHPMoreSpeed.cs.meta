@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Enemies/LowerHPMoreSpeed.cs.meta
 guid: 6c6be7d7b5d8dcc449a049c6353903c9
+=======
+guid: 763171a460eaff44ca05385d85f81d44
+>>>>>>> 2085d275a13426d5a24875095c439baaa4f68a7c:Assets/Scripts/Entities/LowerHPMoreSpeed.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

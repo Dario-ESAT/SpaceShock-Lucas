@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Enemies/TeleportAtHit.cs.meta
 guid: d74c8b0b897a1494cb28dfd9fbb1c18c
+=======
+guid: c7e768a4f44069644974849446df55aa
+>>>>>>> 2085d275a13426d5a24875095c439baaa4f68a7c:Assets/Scripts/Entities/TeleportAtHit.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
