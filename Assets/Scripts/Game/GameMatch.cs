@@ -54,7 +54,8 @@ public class GameMatch : MonoBehaviour {
 		if (wavesPrefabs == null)
 		{
 			isSpawning = false;
-			onFinishingSpawning(null);
+			if (onFinishingSpawning != null)
+				onFinishingSpawning(null);
 		}
 
 		// spawn
@@ -91,7 +92,8 @@ public class GameMatch : MonoBehaviour {
 		if (m_currentWaveIndex >= wavesPrefabs.Count)
 		{
 			isSpawning = false;
-			onFinishingSpawning (null);
+			if(onFinishingSpawning != null)
+				onFinishingSpawning (null);
 		}
 
 		return objectSpawner;
