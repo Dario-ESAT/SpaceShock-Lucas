@@ -14,7 +14,7 @@ public class TeleportAtHit : EntityReaction{
     bottom_height_ = playableArea.rightDownPos.y;
   }
   protected override void OnHit(Health health, EventArgs eventArgs) {
-    Vector3 new_cords = new Vector3(transform.position.x,Random.Range(top_height_ - offset,bottom_height_) + offset/2, transform.position.z);
+    Vector3 new_cords = new Vector3(transform.position.x,Random.Range(top_height_ - offset,bottom_height_ - -offset), transform.position.z);
     transform.position = new_cords;
   }
 

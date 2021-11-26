@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject bulletPrefab; 
 	public float movementDistance = 10.0f;
 
-  public float fire_rate_ = 1;
+  public float fire_delay_ = 1;
 
   float counter_;
 
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 
 		// bullet
 		if (Input.GetKey(KeyCode.Space)) {
-      if (counter_ > fire_rate_) {
+      if (counter_ > fire_delay_) {
 			  Instantiate(bulletPrefab, transform.position + Vector3.right * 6, Quaternion.identity);  
         counter_ = 0;
       } else {
